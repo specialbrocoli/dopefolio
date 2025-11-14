@@ -784,6 +784,76 @@ textarea {
   letter-spacing: 1px
 }
 
+.maintenance-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  animation: pulse 2s infinite;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3)
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3)
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5)
+  }
+}
+
+.maintenance-badge__icon {
+  font-size: 1.4rem;
+  animation: bounce 2s infinite
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-3px)
+  }
+}
+
+.maintenance-badge__text {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px
+}
+
+@media only screen and (max-width: 56.25em) {
+  .maintenance-badge {
+    padding: 0.5rem 1rem
+  }
+
+  .maintenance-badge__icon {
+    font-size: 1.2rem
+  }
+
+  .maintenance-badge__text {
+    font-size: 1.1rem
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .maintenance-badge {
+    display: none
+  }
+}
+
 .header__links {
   display: flex
 }
